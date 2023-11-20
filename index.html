@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css">
+    <title>BLUELOG-TEK</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  
+</head>
+<body> 
+    <header class="header" id="header">
+        <nav class="navbar">
+            <h1 href="#" class="logo">BLUELOG-TEK</h1>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li class="item"><a href="#" class="nav-link">Accueil</a></li>
+                    <li class="item"><a href="#" class="nav-link">Bluelog-tek</a></li>
+                    <li class="item"><a href="#" class="nav-link">A Propos</a></li>
+                    <li class="item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+                <!--close button-->
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <!--Toggle button-->
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--slider_section-->
+    <slider class="slider">
+        <section class="page">
+            <div class="page_container">
+                <div class="page_content">
+                    <div class="page_item">
+                        <h3 class="page_Sous-titre">
+                            Mon Teste
+                        </h3>
+                        <h1 class="page_titre">
+                            Bluelog-tek
+                        </h1>
+                        <p class="page_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                            velit quam alias rerum excepturi doloribus id commodi voluptatem deserunt? 
+                        </p>
+                        <a href="#" class="page_button">voir plus</a>
+                    </div>
+                    <img src="image/rano-2.png" alt="image" class="page_rano-2">
+                    <img src="image/rano-1.png" alt="image" class="page_rano-1">
+                </div>
+                <div class="page_image">
+                    <img src="image/rano-3.png" alt="image">
+                </div>
+            </div>
+        </section>
+    </slider>
+
+   
+    <footer class="footer_section">
+        <div class="footer-info">
+            <p>© copyright 2023 <a href="#">#BLUELOG-TEK</a></p>
+        </div>
+        
+    </footer>
+        
+    
+    
+
+    </script>
+
+</body>
+<script>
+    const navMenu = document.querySelector (".nav-menu")
+    const navToggle = document.querySelector (".nav-toggle")
+    const navClose = document.querySelector (".nav-close")
+
+    /*---meenu show--*/     
+    if(navToggle){
+        navToggle.addEventListener('click',()=>{
+           navMenu.classList.add('show-menu')
+        })
+    }
+    /*--menu hidden--*/
+    if(navClose){
+        navClose.addEventListener('click', () =>{
+            navMenu.classList.remove('show-menu')
+        })
+    }
+    /*--remove menu mobile--*/
+    const navLink = document.querySelectorAll('.nav-link')
+
+    const linkAction = () =>{
+        const navMenu = document.querySelector('.nav-menu')
+        //when we click on each nav-link, we remove the show-menu class
+        navMenu.classList.remove('show-menu')
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction))
+</script>
+
+</html>
